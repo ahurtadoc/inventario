@@ -1,0 +1,23 @@
+{
+    "name": "inventario",
+    "description": "simple aplicación de inventario",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Alexander Hurtado Cardona",
+            "email": "ahurtadoc@unal.edu.co"
+        }
+    ],
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gestor\\Controller\\": "Controllers/",
+            "Gestor\\Helper\\": "Helpers/"
+        }
+    }
+
+}
