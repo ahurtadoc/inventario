@@ -44,7 +44,7 @@ class InventarioController extends Controller
         if ($stock <= 0){
             return $this->toJson(array('No hay stock de este producto'));
         }else{
-            $cambios = array("stock" => $stock-1);
+            $cambios = array("stock" => $stock-1, "UltimaVenta" => date('Y-m-d H:i:s'));
             if($this->db->update('productos',$cambios,$id)){
                 return $this->toJson(array('producto vendido '));
             }

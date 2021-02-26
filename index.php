@@ -37,7 +37,7 @@ $app->group('/productos', function (RouteCollectorProxy $group) {
 
     $group->put('', function ($request, $response, array $args) use ($ic) {
         $body = $request->getBody();
-        $payload = $ic->create($body);
+        $payload = $ic->update($body);
         $response->getBody()->write($payload);
         return $response
             ->withHeader('Content-Type', 'application/json');
