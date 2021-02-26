@@ -32,3 +32,5 @@ COLLATE='utf8_spanish_ci'
 ENGINE=InnoDB
 ;
 ~~~
+
+Para la configuración local de la base de datos, se hace en el archivo *DB.php* en la carpeta Helpers
