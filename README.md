@@ -11,3 +11,24 @@ Para las vistas se crea la carpeta "client", la cual es una aplicación usando e
 Por último recordad instalar las dependencias con *comoposer install* y en la carpeta clien con *npm install*, por lo que se requiere para el funcionamiento del programa tanto *composer* como *node.js*.
 
 El archivo base de la aplicación es index.php, ubicado en la carpeta raíz.
+
+Especificación base de datos.
+
+Para la base de datos se usa MySQL, la base de datos se llama *inventario* y la tabla *productos*
+Adjunto query de la tabla:
+
+~~~sql
+CREATE TABLE `productos` (
+`ID` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+`nombre` VARCHAR(50) NOT NULL COLLATE 'utf8_spanish_ci',
+`referencia` VARCHAR(50) NOT NULL COLLATE 'utf8_spanish_ci',
+`categoria` VARCHAR(50) NOT NULL COLLATE 'utf8_spanish_ci',
+`stock` INT(11) NOT NULL,
+`fechaCreacion` DATE NOT NULL,
+`UltimaVenta` DATETIME NULL DEFAULT NULL,
+PRIMARY KEY (`ID`)
+)
+COLLATE='utf8_spanish_ci'
+ENGINE=InnoDB
+;
+~~~
